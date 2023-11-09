@@ -2,11 +2,13 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
 import '../core/api/rest_client.dart';
+import 'locator_service.dart';
 
 GetIt locator = GetIt.instance;
 
 void setupLocator() {
   setupRestClient();
+  registerServiceSingletons(locator);
 }
 
 void setupRestClient({String? bearerAuthToken = null}) {

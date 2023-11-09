@@ -1,11 +1,13 @@
 import 'package:json_annotation/json_annotation.dart';
+
+import '../../utils/enum.dart';
 part 'current_weather_dto.g.dart';
 
 @JsonSerializable()
 class CurrentWeatherDto {
   DateTime time;
   int interval;
-  int weather_code;
+  WeatherCode weather_code;
   double temperature_2m;
   double wind_speed_10m;
 
